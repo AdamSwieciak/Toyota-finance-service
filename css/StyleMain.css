@@ -1,0 +1,299 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{ 
+    color: grey;
+    font-family: 'Lato', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    background-color: #ddd;
+        }
+div.tape {
+    position: absolute;
+    min-height: 100vh;
+    width: 100%;
+    background-image: url("");
+    z-index: -1;
+    Background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    animation: backgroundo 20s linear infinite;
+} 
+.remove{
+    display: none;
+    animation: backgroundo 20s linear infinite;
+}
+div.button{
+    position: absolute;
+    right: 2%;
+    bottom: 2%;
+    font-size: 20px;
+    background-color: #fff;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    line-height: 35px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+div.chosebgc{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    right: 3%;
+    top: 28%;
+    width: 0%;
+    height: 0%;
+    display: none;
+    border-radius: 10px;
+    opacity: .9;
+    background-color: rgb(234, 235, 231);
+}
+div.active{
+    width: 10%;
+    height: 60%;
+    display: block;
+}
+div.chosebgc .ok{
+    position: relative;
+    flex-basis: 30%;
+    height: 25%;
+    background-color: #fff;
+    margin: 10px;
+    overflow: hidden;
+    color: white;
+    cursor: pointer;
+}
+div.chosebgc .close{
+position: absolute;
+right: -20px;
+top: -20px;
+font-size: 20px;
+cursor: pointer;
+color: beige;
+text-shadow: 0 0 6px black;
+}
+div.chosebgc h1{
+    text-align: center;
+    margin-top: 5px;
+    text-transform: uppercase;
+    color: white;
+    text-shadow: 0 0 3px black;
+    font-size: 16px;
+}
+div.chosebgc > .ok > img{
+    position: absolute;
+    width: 100%;
+    min-height: 100%;
+}
+div.chosebgc .ok span{
+    position: absolute;
+    color: rgb(255, 255, 255);
+    bottom: 10%;
+    right: 10%;
+    font-size: 20px;
+    text-shadow: 0 0 3px black;
+}
+
+div.container{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100vh;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+}
+
+/* nagłówek */
+
+header{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 13px 0;
+    background-color: rgba(256, 256, 256, .8);
+}
+header.hedimg img{
+    width: 71px;
+   
+}
+header div.block {
+    display: flex;
+    flex-basis: 13%;
+    flex-direction: row;
+    justify-content: space-between;
+}
+header div.block a {
+    text-align: center;
+    text-decoration: none;
+    color: rgb(78, 78, 78);
+    line-height: 22px;
+    margin: 10px;
+    transition: .1s;
+}
+header div.block a i{
+    font-size: 25px;
+}
+
+/* środek strony */
+
+div.box{
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    margin: 5px 0;
+}
+div.box nav{
+    flex-basis: 10%;
+    background-color: rgba(256, 256, 256, .8);
+    border-radius: 5px;
+}
+div.box nav li{
+    text-align: center;
+    font-size: 20px;
+    line-height: 35px;
+    margin: 10px 0;
+    color: rgb(78, 78, 78);
+    cursor: pointer;
+    transition: .1s;
+}
+div.box nav ul.menu li a{
+    text-decoration: none;
+    color: rgb(78, 78, 78);
+    display: block;
+    transition: .1s;
+}
+div.box nav ul.menu li a i, div.box nav ul.menu li i {
+   font-size: 55px;
+}
+
+/* pole z programami */
+
+div.box div.progwindow{
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+div.box .progwindow .mainprog{
+    display: flex;
+    flex-wrap: wrap;
+  
+}
+.centerprog, .centerprogt{
+    display: flex;
+    flex-wrap: wrap;
+    Align-self: stretch;
+    align-items: flex-start;
+    flex-grow: 1;
+    margin: 20px;
+}
+.progbox{
+    position: relative;
+    margin: 6px;
+    width: 120px;
+    height: 120px;
+    padding: 8px;
+    background: linear-gradient(to top,#800210,#d1001e) no-repeat #73000d;
+    transition: .1s;
+    opacity: .9;
+    color: seashell;
+    font-size: 20px;
+    text-align: center;
+    overflow: hidden;
+    cursor: pointer;
+    hyphens: manual;
+    }
+.progboxm{
+    position: relative;
+    margin: 6px;
+    width: 120px;
+    height: 60px;
+    padding: 8px;
+    background: linear-gradient(to top,#800210,#d1001e) no-repeat #73000d;
+    transition: .1s;
+    opacity: .9;
+    color: seashell;
+    font-size: 20px;
+    text-align: center;
+    overflow: hidden;
+    cursor: pointer;
+    }
+
+.progwindow div.progbox a {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    padding: 100%;
+    transform: translate(-50%, -50%);
+    color: seashell;
+    font-size: 20px;
+    text-align: center;
+    text-decoration: none;
+    }
+
+/* stopka */
+
+footer{
+    flex-basis: 25%;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0,0,0,.6);
+    color: azure;
+    border-radius: 5px;
+    font-weight: 400;
+    margin: 5px;
+}
+h1,h2{
+    font-weight: 100;
+}
+footer h1{
+    padding-left: 20px;
+    margin: 15px 0;
+}
+h2:nth-of-type(2), h2:nth-of-type(1){
+    padding-left: 50px;
+}
+h2:nth-of-type(3){
+    text-align: center;
+    margin: 11px 0;
+}
+
+@keyframes backgroundo {
+    0%{
+        opacity: 0;
+    }
+    8%{
+        opacity: 0.8;
+    }
+
+    92%{
+        opacity: 0.8;
+    }
+    100%{
+        transform: scale(1.05) translateY(3%) ;
+        filter: sepia(40%);
+        opacity: 0;
+    }
+}
+#ccline{	
+	min-width: 100%;
+	float: left;
+	font-size: 30px;
+	margin-top: 0;
+	margin-bottom: 10px;
+	text-align: left;
+	padding: 2px;
+	border-bottom: 2px solid rgb(207, 20, 43);	}
+b{
+    color: snow;
+    text-shadow: 0 0 2px black;
+}
