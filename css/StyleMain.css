@@ -1,14 +1,16 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
-body{ 
+
+body {
     color: grey;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 15px;
     font-weight: 700;
     background-color: #ddd;
-        }
+}
+
 div.tape {
     position: absolute;
     min-height: 100vh;
@@ -19,12 +21,14 @@ div.tape {
     background-size: cover;
     background-position: bottom;
     animation: backgroundo 20s linear infinite;
-} 
-.remove{
+}
+
+.remove {
     display: none;
     animation: backgroundo 20s linear infinite;
 }
-div.button{
+
+div.button {
     position: absolute;
     right: 2%;
     bottom: 2%;
@@ -37,7 +41,8 @@ div.button{
     border-radius: 50%;
     cursor: pointer;
 }
-div.chosebgc{
+
+div.chosebgc {
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -51,12 +56,14 @@ div.chosebgc{
     opacity: .9;
     background-color: rgb(234, 235, 231);
 }
-div.active{
+
+div.active {
     width: 10%;
     height: 60%;
     display: block;
 }
-div.chosebgc .ok{
+
+div.chosebgc .ok {
     position: relative;
     flex-basis: 30%;
     height: 25%;
@@ -66,29 +73,35 @@ div.chosebgc .ok{
     color: white;
     cursor: pointer;
 }
-div.chosebgc .close{
-position: absolute;
-right: -20px;
-top: -20px;
-font-size: 20px;
-cursor: pointer;
-color: beige;
-text-shadow: 0 0 6px black;
+
+div.chosebgc .close {
+    position: absolute;
+    right: -20px;
+    top: -20px;
+    font-size: 20px;
+    cursor: pointer;
+    color: rgb(212, 212, 193);
+    text-shadow: 0 0 3px black;
+
 }
-div.chosebgc h1{
+
+div.chosebgc h1 {
     text-align: center;
     margin-top: 5px;
     text-transform: uppercase;
     color: white;
-    text-shadow: 0 0 3px black;
+    text-shadow: 0 0 4px black;
     font-size: 16px;
+    font-weight: 700;
 }
-div.chosebgc > .ok > img{
+
+div.chosebgc>.ok>img {
     position: absolute;
     width: 100%;
     min-height: 100%;
 }
-div.chosebgc .ok span{
+
+div.chosebgc .ok span {
     position: absolute;
     color: rgb(255, 255, 255);
     bottom: 10%;
@@ -97,7 +110,25 @@ div.chosebgc .ok span{
     text-shadow: 0 0 3px black;
 }
 
-div.container{
+div.alert {
+    position: absolute;
+    right: 70px;
+    bottom: 10px;
+    padding: 10px 15px;
+    background-color: rgb(4, 125, 206);
+    text-shadow: 0 0 4px black;
+    font-weight: 500;
+    color: aliceblue;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 0px 10px 9px rgba(0, 0, 0, 0.55);
+    -moz-box-shadow: 0px 0px 10px 9px rgba(0, 0, 0, 0.55);
+    box-shadow: 0px 0px 10px 9px rgba(0, 0, 0, 0.55);
+    opacity: 1;
+    transition: 1s;
+    z-index: -1;
+}
+
+div.container {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -110,7 +141,7 @@ div.container{
 
 /* nagłówek */
 
-header{
+header {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -118,16 +149,19 @@ header{
     margin: 13px 0;
     background-color: rgba(256, 256, 256, .8);
 }
-header.hedimg img{
+
+header.hedimg img {
     width: 71px;
-   
+
 }
+
 header div.block {
     display: flex;
     flex-basis: 13%;
     flex-direction: row;
     justify-content: space-between;
 }
+
 header div.block a {
     text-align: center;
     text-decoration: none;
@@ -136,24 +170,27 @@ header div.block a {
     margin: 10px;
     transition: .1s;
 }
-header div.block a i{
+
+header div.block a i {
     font-size: 25px;
 }
 
 /* środek strony */
 
-div.box{
+div.box {
     display: flex;
     flex-direction: row;
     flex-grow: 1;
     margin: 5px 0;
 }
-div.box nav{
+
+div.box nav {
     flex-basis: 10%;
     background-color: rgba(256, 256, 256, .8);
     border-radius: 5px;
 }
-div.box nav li{
+
+div.box nav li {
     text-align: center;
     font-size: 20px;
     line-height: 35px;
@@ -162,19 +199,22 @@ div.box nav li{
     cursor: pointer;
     transition: .1s;
 }
-div.box nav ul.menu li a{
+
+div.box nav ul.menu li a {
     text-decoration: none;
     color: rgb(78, 78, 78);
     display: block;
     transition: .1s;
 }
-div.box nav ul.menu li a i, div.box nav ul.menu li i {
-   font-size: 55px;
+
+div.box nav ul.menu li a i,
+div.box nav ul.menu li i {
+    font-size: 55px;
 }
 
 /* pole z programami */
 
-div.box div.progwindow{
+div.box div.progwindow {
     position: relative;
     width: 100%;
     display: flex;
@@ -182,12 +222,15 @@ div.box div.progwindow{
     justify-content: center;
     align-items: center;
 }
-div.box .progwindow .mainprog{
+
+div.box .progwindow .mainprog {
     display: flex;
     flex-wrap: wrap;
-  
+
 }
-.centerprog, .centerprogt{
+
+.centerprog,
+.centerprogt {
     display: flex;
     flex-wrap: wrap;
     Align-self: stretch;
@@ -195,13 +238,14 @@ div.box .progwindow .mainprog{
     flex-grow: 1;
     margin: 20px;
 }
-.progbox{
+
+.progbox {
     position: relative;
     margin: 6px;
     width: 120px;
     height: 120px;
     padding: 8px;
-    background: linear-gradient(to top,#800210,#d1001e) no-repeat #73000d;
+    background: linear-gradient(to top, #800210, #d1001e) no-repeat #73000d;
     transition: .1s;
     opacity: .9;
     color: seashell;
@@ -210,14 +254,15 @@ div.box .progwindow .mainprog{
     overflow: hidden;
     cursor: pointer;
     hyphens: manual;
-    }
-.progboxm{
+}
+
+.progboxm {
     position: relative;
     margin: 6px;
     width: 120px;
     height: 60px;
     padding: 8px;
-    background: linear-gradient(to top,#800210,#d1001e) no-repeat #73000d;
+    background: linear-gradient(to top, #800210, #d1001e) no-repeat #73000d;
     transition: .1s;
     opacity: .9;
     color: seashell;
@@ -225,7 +270,7 @@ div.box .progwindow .mainprog{
     text-align: center;
     overflow: hidden;
     cursor: pointer;
-    }
+}
 
 .progwindow div.progbox a {
     position: absolute;
@@ -237,62 +282,73 @@ div.box .progwindow .mainprog{
     font-size: 20px;
     text-align: center;
     text-decoration: none;
-    }
+}
 
 /* stopka */
 
-footer{
+footer {
     flex-basis: 25%;
     display: flex;
     flex-direction: column;
-    background-color: rgba(0,0,0,.6);
+    background-color: rgba(0, 0, 0, .6);
     color: azure;
     border-radius: 5px;
     font-weight: 400;
     margin: 5px;
 }
-h1,h2{
+
+h1,
+h2 {
     font-weight: 100;
 }
-footer h1{
+
+footer h1 {
     padding-left: 20px;
     margin: 15px 0;
 }
-h2:nth-of-type(2), h2:nth-of-type(1){
+
+h2:nth-of-type(2),
+h2:nth-of-type(1) {
     padding-left: 50px;
 }
-h2:nth-of-type(3){
+
+h2:nth-of-type(3) {
     text-align: center;
     margin: 11px 0;
 }
 
 @keyframes backgroundo {
-    0%{
+    0% {
         opacity: 0;
     }
-    8%{
+
+    8% {
         opacity: 0.8;
     }
 
-    92%{
+    92% {
         opacity: 0.8;
     }
-    100%{
-        transform: scale(1.05) translateY(3%) ;
+
+    100% {
+        transform: scale(1.05) translateY(3%);
         filter: sepia(40%);
         opacity: 0;
     }
 }
-#ccline{	
-	min-width: 100%;
-	float: left;
-	font-size: 30px;
-	margin-top: 0;
-	margin-bottom: 10px;
-	text-align: left;
-	padding: 2px;
-	border-bottom: 2px solid rgb(207, 20, 43);	}
-b{
+
+#ccline {
+    min-width: 100%;
+    float: left;
+    font-size: 30px;
+    margin-top: 0;
+    margin-bottom: 10px;
+    text-align: left;
+    padding: 2px;
+    border-bottom: 2px solid rgb(207, 20, 43);
+}
+
+b {
     color: snow;
     text-shadow: 0 0 2px black;
 }
